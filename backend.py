@@ -3,14 +3,14 @@ import numpy as np
 import streamlit as st
 from datetime import datetime
  
-EXCEL_FILE = r"https://github.com/anushh-git/MedCare-Pro/blob/main/inventory.xlsx"
+EXCEL_FILE = r"inventory.xlsx"
 
 # LOAD DATA
  
 @st.cache_data
 def load_data():
  
-    df = pd.read_excel(EXCEL_FILE)
+    df = pd.read_excel(EXCEL_FILE, engine="openpyxl")
  
     df["Expiry_Date"] = pd.to_datetime(df["Expiry_Date"])
     df["Manufacturing_Date"] = pd.to_datetime(df["Manufacturing_Date"])
