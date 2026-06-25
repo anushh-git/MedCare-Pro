@@ -3,7 +3,7 @@ import numpy as np
 import streamlit as st
 from datetime import datetime
  
-EXCEL_FILE = r"C:/Users/anushka-sr/Desktop/demo/inventory.xlsx"
+EXCEL_FILE = r"https://github.com/anushh-git/MedCare-Pro/blob/main/inventory.xlsx"
 
 # LOAD DATA
  
