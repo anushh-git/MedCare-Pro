@@ -2,10 +2,10 @@ import pandas as pd
 import sqlite3
 
 # Path to your Excel file
-EXCEL_FILE = r"C:/Users/anushka-sr/Desktop/demo/inventory.xlsx"
+EXCEL_FILE = r"inventory.xlsx"
 
 # Load Excel
-df = pd.read_excel(EXCEL_FILE)
+df = pd.read_excel(EXCEL_FILE, engine="openpyxl")
 
 # Clean column names (VERY IMPORTANT)
 df.columns = df.columns.str.strip()
